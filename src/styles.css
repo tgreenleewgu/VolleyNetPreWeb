@@ -1,1 +1,280 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles for moving background gradient */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #00008B,#180666,#7c0202, #380101); /* More contrasting colors */
+  background-size: 200% 200%; /* Gradient should cover the full page */
+  animation: gradientMove 15s ease infinite; /* Animation for background */
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+}
+
+/* Gradient Animation */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Container for Layout */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.logo {
+  max-width: 180px;
+  height: auto;
+}
+
+/* Main Content */
+.main-content {
+  text-align: center;
+}
+
+.headline {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #FFF8DC;
+}
+
+.subhead {
+  font-size: 20px;
+  color: #DEB887;
+  margin-bottom: 20px;
+}
+
+.cta-text {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #DEB887;
+}
+
+/* Buttons */
+.store-links {
+  margin: 20px 0;
+}
+
+.store-button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  margin: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+.store-button:hover {
+  background-color: #0056b3;
+}
+
+/* Features */
+.features {
+  margin-top: 60px;
+  text-align: left;
+}
+
+.features h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #00008B;
+}
+
+.features ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.features li {
+  font-size: 18px;
+  margin: 10px 0;
+  position: relative;
+  padding-left: 25px;
+}
+
+.features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #ffc107;
+  font-weight: bold;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 14px;
+  color: #777;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .headline {
+    font-size: 28px;
+  }
+
+  .subhead, .cta-text {
+    font-size: 16px;
+  }
+
+  .store-button {
+    width: 100%;
+  }
+
+  .features li {
+    font-size: 16px;
+  }
+}
+/* Card Container for Features - Styled like QR Code Card */
+.features-card {
+  background: linear-gradient(135deg, #ffffffcc, #f0f8ffcc); /* Apply a gradient similar to the QR style */
+  border-radius: 16px;
+  padding: 20px; /* Reduced padding for the card */
+  margin: 20px auto; /* Reduced top margin to remove excess space */
+  max-width: 800px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.features-card:hover {
+  transform: translateY(-5px); /* Add subtle movement */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Heading Style */
+.features-card h2 {
+  font-size: 1.8em;
+  margin: 10px 0 15px; /* Reduced margin above and below heading */
+  color: #00008B;
+  text-align: center; /* Ensure heading is centered */
+}
+
+/* Feature List Style */
+.features-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 600px;
+  text-align: left; /* Ensures bullets start from the same point */
+}
+
+
+.features-card li {
+  font-size: 18px;
+  margin: 10px 0;
+  position: relative;
+  padding-left: 0; /* Remove indent since we’re centering */
+}
+
+.features-card li::before {
+  display: inline-block;
+  content: "✓";
+  color: #ffc107;
+  font-weight: bold;
+  margin-right: 8px;
+  position: relative;
+  left: 0;
+}
+
+/* Feature List Items */
+.features-card li {
+  display: inline-block;
+  margin: 10px 20px; /* Add space between items */
+  text-align: left; /* Align text to the left */
+}
+
+
+
+/* Bottom Store Buttons */
+.bottom-store-links {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+.bottom-store-button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  margin: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+.logo {
+  width: 150px;    /* or any size you want */
+  height: auto;    /* keeps aspect ratio */
+}
+.qr-section {
+  background: linear-gradient(135deg, #ffffffcc, #f0f8ffcc); /* Apply a gradient similar to the QR style */
+  border-radius: 16px;
+  padding: 20px; /* Reduced padding for the card */
+  margin: 20px auto; /* Reduced top margin to remove excess space */
+  max-width: 800px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.qr-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.qr-section h3 {
+  font-size: 1.8em;
+  color: #00008B;
+  margin-bottom: 10px;
+}
+
+.qr-section p {
+  font-size: 1em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.qr-code {
+  width: 160px;
+  height: 160px;
+  border-radius: 8px;
+  border: 3px solid #00008B;
+  padding: 5px;
+  background-color: white;
+}

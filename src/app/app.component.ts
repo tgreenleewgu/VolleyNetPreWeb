@@ -3,10 +3,21 @@ import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'untitled';
+assets: any;
+volleynetlogo1: any;
+
+  redirectToAppleStore(): void {
+    window.open('https://www.apple.com/app-store/', '_blank');
+  }
+
+  redirectToGoogleStore(): void {
+    window.open('https://play.google.com/store', '_blank');
+  }
 }
